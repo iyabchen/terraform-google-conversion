@@ -6,7 +6,7 @@ test:
 test-integration:
 	go version
 	terraform --version
-	go test -run=CLI ./...
+	TEST_PROJECT=${TEST_PROJECT} go test -run=CLI ./...
 
 test-go-licenses:
 	cd .. && go version && go install github.com/google/go-licenses@latest
