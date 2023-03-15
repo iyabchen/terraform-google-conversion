@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"github.com/GoogleCloudPlatform/terraform-google-conversion/v2/cai2hcl"
+	"github.com/GoogleCloudPlatform/terraform-google-conversion/v2/caiasset"
 	"github.com/GoogleCloudPlatform/terraform-google-conversion/v2/tfplan2cai"
-	"github.com/GoogleCloudPlatform/terraform-validator/converters/google"
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/hcl/hcl/printer"
 )
@@ -105,7 +105,7 @@ func roundtripTest(t *testing.T, name string, tmpDir string, data *testData) {
 	}
 
 	// convert from assets to hcl
-	var assetsInput []*google.Asset
+	var assetsInput []*caiasset.Asset
 	for ix := range gotAssets {
 		assetsInput = append(assetsInput, &gotAssets[ix])
 	}

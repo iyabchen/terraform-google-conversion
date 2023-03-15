@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	google "github.com/GoogleCloudPlatform/terraform-validator/converters/google/resources"
+	google "github.com/GoogleCloudPlatform/terraform-google-conversion/v2/tfplan2cai/converters/google/resources"
 )
 
 const (
